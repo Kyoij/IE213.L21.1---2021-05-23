@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('components/head',{title}); -%>
+    <body>
+        <%- include('components/navbar',{nav:"home",search}); -%>
+        <main>
+            <div class="album py-5 bg-light">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                        <% flowers.forEach(function(flower){%> <%- include('components/card.ejs',{flower}); %> <%})%>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <%- include('components/footer'); -%>
+    </body>
+</html>
